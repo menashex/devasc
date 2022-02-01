@@ -1,0 +1,26 @@
+Python Challenge Lab
+This challenge lab represents a fictional situation.
+
+Innovation, Science and Economic Development Canada, the governing body for Amateur Radio enthusiasts in Canada maintains a public database of all licensed Amateur Radio users. The following file is a partial copy of the public data:
+
+ham-db.json_Download
+It is a plain text gzip’ed JSON formatted file.
+
+A local amateur radio club would like to run an “Advanced” Operator’s License course but needs to get the word out to local hams (amateur radio users). In the past, people within a 45 minute drive to the classroom have been the most likely to attend the class.
+
+The club plans to hold classes at this address:
+
+Bowness Scouts & Lions Hall
+8551 Bowness Rd NW
+Calgary, AB
+T3B 0H8
+
+The club would like to reach out to those Hams that are within a 45 minute drive of the classroom and do not yet have their Advanced license. Your job is to build a list of callsigns that meet this criteria.
+
+Using Python v3:
+
+Open and read the data from the ham-db.json file. It contains callsigns, postal codes, and their credentials.
+Use a RegEx in a Lambda function in a Filter list to return a list of Hams near Calgary, Alberta that do not yet have their “Advanced” qualification. [ Postal Codes starts with T1, T2, T3, or T4 and Advanced = False ] Using this filter will significantly reduce the amount of data needing to be processed. Expect 1,731 results if your filter is working properly.
+Use the MapQuest API (free tier) to calculate the driving time between a Ham’s given Postal Code and the classroom. Return the list of callsigns that have an expected driving time of less than 45 minutes.
+There may be multiple Hams in the same postal code – don’t use the MapQuest API to lookup the same postal code twice. The postal code “T3G 6A7” is known to appear more than once.
+As you are using the free tier of MapQuest’s API you should limit your use of the MapQuest API to no more than 10 requests per hour. The goal is to show that you understand the process and how to write Python to solve it – you don’t need to map out every single Ham.

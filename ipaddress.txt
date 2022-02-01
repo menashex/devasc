@@ -1,0 +1,14 @@
+ipadd = {
+        "ip" : None,
+        "username" : None,
+        "password": None,
+        "command": None
+        }
+        
+ipadd['ip']=input("please enter ip address:     ")
+ipadd['username']=input("please enter username:     ")
+ipadd['password']=input("password:      ")
+ipadd['command']=input("command:        ")
+
+
+print(ipadd.keys())
